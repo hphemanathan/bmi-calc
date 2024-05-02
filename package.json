@@ -1,5 +1,5 @@
 {
-  "name": "bmi-calculator",
+  "name": "vite-project",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "sass": "^1.75.0",
+    "sass": "^1.76.0",
     "vite": "^5.2.0"
   }
 }
