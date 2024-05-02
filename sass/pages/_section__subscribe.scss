@@ -1,0 +1,61 @@
+.section__subscribe {
+  margin-inline: auto;
+  text-align: center;
+  @include tab {
+    margin-block-end: var(--80px);
+  }
+
+  &--heading {
+    margin-block-end: 15px;
+    & span {
+      color: var(--blue-dark);
+      font-weight: 700;
+    }
+  }
+
+  &--text {
+    margin-block-end: 32px;
+    @include tab {
+      margin-block-end: 40px;
+    }
+  }
+
+  &__input {
+    &--wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      align-items: center;
+      width: 90%;
+      margin-inline: auto;
+      margin-block-end: var(--72);
+
+      @include tab {
+        grid-template-columns: 2fr 1fr;
+        margin-block-end: var(--94px);
+      }
+    }
+
+    &--box {
+      margin-block-end: var(--10px);
+      width: 90%;
+      border: 1px solid var(--blue);
+      border-radius: var(--28);
+      transition: all 0.2s;
+      padding-block: var(--18px);
+      padding-inline-start: var(--32px);
+
+      @include tab {
+        margin-block-end: 0;
+      }
+
+      &:focus {
+        outline: 1px solid var(--blue);
+      }
+    }
+  }
+
+  &--img {
+    margin-bottom: var(--120px);
+  }
+}

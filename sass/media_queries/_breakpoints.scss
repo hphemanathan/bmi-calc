@@ -1,0 +1,30 @@
+$breakpoints: (
+  "tab": 45em,
+  "tab-portrait": 50em,
+  "desktop": 68.75em,
+  "desktop-l": 91em,
+);
+
+@mixin tab {
+  @media (min-width: map-get($breakpoints, "tab")) {
+    @content;
+  }
+}
+
+@mixin tab-portrait {
+  @media (min-width: map-get($breakpoints, "tab-portrait")) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: map-get($breakpoints, "desktop")) {
+    @content;
+  }
+}
+
+@mixin desktop-l {
+  @media (min-width: map-get($breakpoints, "desktop-l")) {
+    @content;
+  }
+}
