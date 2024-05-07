@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      @font-face {
+        font-family: "inter";
+        src: url("public/assets/fonts/Inter-VariableFont_slnt\,wght.woff2")
+            format("woff2 supports variations"),
+          url("public/assets/fonts/Inter-VariableFont_slnt\,wght.woff2")
+            format("woff2-variations");
+        font-weight: 100 1000;
+        /* font-style: normal; */
+      }
+    </style>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
@@ -11,10 +27,13 @@
       <div class="header__logo">
         <img src="/assets/images/logo.svg" alt="Brand Logo" />
       </div>
-      Body Mass Index Calculator Better understand your weight in relation to
-      your height using our body mass index (BM) calculator. While BMI is not
-      the sole determinant of a healthy weight, it offers a valuable starting
-      point to evaluate your overall health and well-being.
+      <h1 class="header__heading">Body Mass Index Calculator</h1>
+      <p class="header__text">
+        Better understand your weight in relation to your height using our body
+        mass index (BM) calculator. While BMI is not the sole determinant of a
+        healthy weight, it offers a valuable starting point to evaluate your
+        overall health and well-being.
+      </p>
     </header>
 
     <main class="container">
@@ -94,10 +113,11 @@
               alt="Male & female gender" />
             <h4 class="section__disadvantages--card-header-heading">Gender</h4>
           </div>
-          <p class="section__disadvantages--card-text"></p>
-          The development and body fat composition of girls and boys vary with
-          age. Consequently, a child's age and gender are considered when
-          evaluating their BMI.</p>
+          <p class="section__disadvantages--card-text">
+            The development and body fat composition of girls and boys vary with
+            age. Consequently, a child's age and gender are considered when
+            evaluating their BMI.
+          </p>
         </div>
         <div class="section__disadvantages--card">
           <div class="section__disadvantages--card-header">
@@ -106,18 +126,20 @@
               alt="birthday cake with single candle" />
             <h4 class="section__disadvantages--card-header-heading">Age</h4>
           </div>
-          <p class="section__disadvantages--card-text"></p>
-          In aging individuals, increased body fat and muscle loss may cause BMI
-          to underestimate body fat content.</p>
+          <p class="section__disadvantages--card-text">
+            In aging individuals, increased body fat and muscle loss may cause
+            BMI to underestimate body fat content.
+          </p>
         </div>
         <div class="section__disadvantages--card">
           <div class="section__disadvantages--card-header">
             <img src="public/assets/images/icon-muscle.svg" alt="Biceps icon" />
             <h4 class="section__disadvantages--card-header-heading">Muscle</h4>
           </div>
-          <p class="section__disadvantages--card-text"></p>
-          BMI may misclassify muscular individuals as overweight or obese, as it
-          doesn't differentiate muscle from fat.</p>
+          <p class="section__disadvantages--card-text">
+            BMI may misclassify muscular individuals as overweight or obese, as
+            it doesn't differentiate muscle from fat.
+          </p>
         </div>
         <div class="section__disadvantages--card">
           <div class="section__disadvantages--card-header">
@@ -128,10 +150,11 @@
               Pregnancy
             </h4>
           </div>
-          <p class="section__disadvantages--card-text"></p>
-          Expectant mothers experience weight gain due to their growing baby.
-          Maintaining a healthy pre-pregnancy BMI is advisable to minimise
-          health risks for both mother and child.</p>
+          <p class="section__disadvantages--card-text">
+            Expectant mothers experience weight gain due to their growing baby.
+            Maintaining a healthy pre-pregnancy BMI is advisable to minimise
+            health risks for both mother and child.
+          </p>
         </div>
         <div class="section__disadvantages--card">
           <div class="section__disadvantages--card-header">
@@ -141,9 +164,10 @@
             <h4 class="section__disadvantages--card-header-heading">Race</h4>
           </div>
           <p class="section__disadvantages--card-text">
-          Certain health concerns may affect individuals of some Black and Asian
-          origins at lower BMIs than others. To learn more, it is advised to
-          discuss this with your GP or practice nurse.</p>
+            Certain health concerns may affect individuals of some Black and
+            Asian origins at lower BMIs than others. To learn more, it is
+            advised to discuss this with your GP or practice nurse.
+          </p>
         </div>
       </section>
     </main>
