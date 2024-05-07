@@ -1,8 +1,13 @@
 body {
-  font-family: var(--font-family);
-  font-size: var(--font-s-body);
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
   color: var(--blue-dark);
+  font-weight: 300;
   // display: flex;
   // flex-direction: column;
   // background-color: red;
+}
+
+.section__points--card-text {
+  font-weight: 400;
 }
