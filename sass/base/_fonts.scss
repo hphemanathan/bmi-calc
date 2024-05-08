@@ -4,7 +4,11 @@
 
   // //Font size
   // --font-s-body:
-  // --font-s-h1:
+  --font-s-h1: clamp(3rem, 2.647887323943662rem + 1.5023474178403755vw, 4rem);
 
   // --font-s-footer:
+
+  //Font Weight
+
+  --font-w-SB: 600;
 }

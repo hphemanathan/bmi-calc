@@ -1,6 +1,6 @@
 .header {
   &__heading {
-    font-size: 48px;
-    font-weight: 900;
+    font-size: var(--font-s-h1);
+    font-weight: var(--font-w-SB);
   }
 }
