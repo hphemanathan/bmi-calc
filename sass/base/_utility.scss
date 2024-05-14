@@ -3,3 +3,8 @@
   align-items: center;
   justify-content: center;
 }
+
+.max-width {
+  width: min(calc(100% - 48px), 31rem);
+  margin-inline: auto;
+}
