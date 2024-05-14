@@ -1,7 +1,14 @@
 .header {
   text-align: center;
+  margin-block-end: var(--margin-bottom);
+
+  &__logo {
+    margin-top: var(--32px);
+    margin-block-end: var(--margin-bottom);
+  }
   &__heading {
     font-size: var(--font-s-h1);
     font-weight: var(--font-w-SB);
+    margin-block-end: var(--margin-bottom);
   }
 }
