@@ -37,8 +37,22 @@
     </header>
 
     <main class="container">
-      <section class="section__calc">
-        Enter your details below Metric Imperial Height Weight Your BMI is...
+      <section class="section__calc max-width">
+        <h4 class="section__calc-heading">Enter your details below</h4>
+        <form action="" class="section__calc-from">
+          <div>
+            <label for="Metric">Metric</label>
+            <input type="radio" id="Metric" name="unit" value="Metric" />
+
+            <label for="Imperial">Imperial</label>
+            <input type="radio" id="Imperial" name="unit" value="Imperial" />
+          </div>
+          <label for="height">Height</label>
+          <input type="text" id="height" name="height" />
+          <span style="margin-left: -20px">CM</span>
+        </form>
+
+        Metric Imperial Height Weight Your BMI is...
 
         <!-- add score -->
 
