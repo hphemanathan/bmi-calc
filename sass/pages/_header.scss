@@ -1,13 +1,14 @@
 .header {
   text-align: center;
-  margin-block-end: calc(var(--margin-bottom) * 2);
+  margin-block-end: calc(var(--spacing) * 2);
+
   &__logo {
     margin-top: var(--32px);
-    margin-block-end: var(--margin-bottom);
+    margin-block-end: var(--spacing);
   }
   &__heading {
     font-size: var(--font-s-h1);
     font-weight: var(--font-w-SB);
-    margin-block-end: var(--margin-bottom);
+    margin-block-end: var(--spacing);
   }
 }
