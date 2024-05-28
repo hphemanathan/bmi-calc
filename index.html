@@ -20,7 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>BMI Calculator</title>
   </head>
   <body>
     <header class="header max-width">
@@ -40,13 +40,17 @@
       <section class="section__calc max-width">
         <h4 class="section__calc-heading">Enter your details below</h4>
         <form action="" class="section__calc-form">
-          <div>
-            <label for="Metric">Metric</label>
-            <input type="radio" id="Metric" name="unit" value="Metric" />
-
-            <label for="Imperial">Imperial</label>
-            <input type="radio" id="Imperial" name="unit" value="Imperial" />
+          <div class="section__calc-form--unitSys">
+            <div class="section__calc-form--unitSys-input">
+              <input type="radio" id="Metric" name="unit" value="Metric" />
+              <label for="Metric">Metric</label>
+            </div>
+            <div class="section__calc-form--unitSys-input">
+              <input type="radio" id="Imperial" name="unit" value="Imperial" />
+              <label for="Imperial">Imperial</label>
+            </div>
           </div>
+
           <div class="section__calc-form--metric">
             <label for="height">Height</label>
             <input type="text" id="height" name="height" />
