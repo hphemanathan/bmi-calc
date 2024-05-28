@@ -39,7 +39,7 @@
     <main class="container">
       <section class="section__calc max-width">
         <h4 class="section__calc-heading">Enter your details below</h4>
-        <form action="" class="section__calc-from">
+        <form action="" class="section__calc-form">
           <div>
             <label for="Metric">Metric</label>
             <input type="radio" id="Metric" name="unit" value="Metric" />
@@ -47,12 +47,27 @@
             <label for="Imperial">Imperial</label>
             <input type="radio" id="Imperial" name="unit" value="Imperial" />
           </div>
-          <label for="height">Height</label>
-          <input type="text" id="height" name="height" />
-          <span style="margin-left: -20px">CM</span><br />
-          <label for="weight">Weight</label>
-          <input type="text" id="weight" name="weight" />
-          <span style="margin-left: -20px">CM</span>
+          <div class="section__calc-form--metric">
+            <label for="height">Height</label>
+            <input type="text" id="height" name="height" />
+            <span style="margin-left: -20px">CM</span><br />
+            <label for="weight">Weight</label>
+            <input type="text" id="weight" name="weight" />
+            <span style="margin-left: -20px">CM</span>
+          </div>
+
+          <div class="section__calc-form--imperial">
+            <label for="height">Height</label>
+            <input type="text" id="height" name="height" />
+            <span style="margin-left: -20px">ft</span>
+            <input type="text" id="height" name="height" />
+            <span style="margin-left: -20px">in</span><br />
+            <label for="weight">Weight</label>
+            <input type="text" id="weight" name="weight" />
+            <span style="margin-left: -20px">st</span>
+            <input type="text" id="weight" name="weight" />
+            <span style="margin-left: -20px">lbs</span>
+          </div>
         </form>
 
         Metric Imperial Height Weight Your BMI is...
