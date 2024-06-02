@@ -10,6 +10,17 @@
       // border: var(--border);
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      margin-bottom: var(--spacing);
+
+      &-input input {
+        /* Add if not using autoprefixer */
+        -webkit-appearance: none;
+        appearance: none;
+        /* For iOS < 15 to remove gradient background */
+        background-color: #fff;
+        /* Not removed via appearance */
+        margin: 0;
+      }
     }
   }
 }
