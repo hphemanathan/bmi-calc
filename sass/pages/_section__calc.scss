@@ -20,6 +20,11 @@
         background-color: #fff;
         /* Not removed via appearance */
         margin: 0;
+        font: inherit;
+        width: 31px;
+        height: 31px;
+        border: 1px solid var(--accent);
+        border-radius: 50%;
       }
     }
   }
