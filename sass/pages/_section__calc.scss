@@ -27,10 +27,15 @@
           font: inherit;
           width: 31px;
           height: 31px;
-          border: 1px solid var(--accent);
+          border: 1px solid var(--accent-light);
           border-radius: 50%;
           display: grid;
           place-content: center;
+
+          &:checked {
+            background-color: var(--accent-light);
+            border: none;
+          }
 
           &:checked::before {
             transform: scale(1);
