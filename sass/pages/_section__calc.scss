@@ -63,7 +63,11 @@
       }
     }
     &--metric {
-      display: grid;
+      // display: grid;
+
+      &__input {
+        margin-bottom: var(--spacing);
+      }
       & input {
         border: 1px solid lightgray;
         border-radius: 15px;
@@ -71,6 +75,25 @@
         font-weight: var(--font-w-B);
         padding: calc(var(--spacing) - 4px);
         width: 100%;
+
+        &:hover,
+        :active {
+          cursor: pointer;
+          border: none;
+          border: 1px solid var(--accent);
+        }
+
+        &:focus {
+          outline: none;
+          border: 1px solid var(--accent);
+          cursor: revert;
+        }
+      }
+      & span {
+        margin-left: -52px;
+        font-size: var(--font-s-h3);
+        font-weight: var(--font-w-B);
+        color: var(--accent);
       }
     }
   }
