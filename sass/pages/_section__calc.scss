@@ -1,4 +1,11 @@
 .section__calc {
+  border-radius: 25px;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  &-wrapper {
+    //
+    padding: var(--spacing);
+  }
   &-heading {
     font-size: var(--font-s-h3);
     margin-bottom: var(--spacing);
@@ -139,6 +146,25 @@
         font-weight: var(--font-w-B);
         color: var(--accent);
       }
+    }
+  }
+  &--result {
+    color: #fff;
+    background-color: var(--accent);
+    border-radius: 25px;
+
+    &-wrapper {
+      padding: calc(var(--spacing) + 8px);
+    }
+
+    &-text {
+      font-weight: var(--font-w-SB);
+    }
+
+    &-number {
+      font-size: var(--font-s-h1);
+      font-weight: var(--font-w-SB);
+      margin-block-end: var(--spacing);
     }
   }
 }
