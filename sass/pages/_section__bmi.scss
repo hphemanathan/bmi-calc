@@ -1,5 +1,16 @@
 .sectionBmi {
   &__img {
-    margin-block-end: calc(var(--spacing) * 3);
+    margin-block-end: calc(var(--spacing) * 2);
+  }
+  &__about {
+    margin-block-end: calc(var(--spacing) * 5);
+
+    &--heading {
+      font-size: var(--font-s-h2);
+      font-weight: var(--font-w-SB);
+      line-height: 110%;
+      letter-spacing: -5%;
+      margin-block-end: calc(var(--spacing) + 8px);
+    }
   }
 }
