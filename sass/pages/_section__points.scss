@@ -1,0 +1,15 @@
+.section__points {
+  &--card {
+    &-icon {
+      margin-block-end: calc(var(--spacing) + 8px);
+    }
+    &-heading {
+      font-size: var(--font-s-h3);
+      font-weight: var(--font-w-SB);
+      margin-block-end: var(--spacing);
+    }
+    &-text {
+      margin-block-end: calc(var(--spacing) + 16px);
+    }
+  }
+}
