@@ -1,0 +1,9 @@
+.section__limitations {
+  &--heading {
+    text-align: center;
+    margin-block-end: calc(var(--spacing) + 8px);
+  }
+  &--text {
+    margin-block-end: calc(var(--spacing) * 2 + 8px);
+  }
+}
