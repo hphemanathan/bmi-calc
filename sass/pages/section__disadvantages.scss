@@ -1,0 +1,10 @@
+.section__disadvantages {
+  &--card {
+    margin-block-end: calc(var(--spacing) - 8px);
+    &-header {
+      display: flex;
+      align-items: center;
+      column-gap: calc(var(--spacing) - 8px);
+    }
+  }
+}
