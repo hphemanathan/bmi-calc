@@ -1,6 +1,9 @@
 .section__disadvantages {
   &--card {
     margin-block-end: calc(var(--spacing) - 8px);
+    &-wrapper {
+      padding: var(--spacing);
+    }
     &-header {
       display: flex;
       align-items: center;
