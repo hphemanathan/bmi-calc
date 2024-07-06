@@ -1,6 +1,8 @@
 .section__disadvantages {
   &--card {
     margin-block-end: calc(var(--spacing) - 8px);
+    background-color: gray;
+    border-radius: 16px;
     &-wrapper {
       padding: var(--spacing);
     }
