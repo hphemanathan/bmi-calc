@@ -1,0 +1,17 @@
+.section__disadvantages {
+  &--card {
+    margin-block-end: calc(var(--spacing) - 8px);
+    background-color: gray;
+    border-radius: 16px;
+    &-wrapper {
+      padding: var(--spacing);
+    }
+    &-header {
+      display: flex;
+      align-items: center;
+      column-gap: calc(var(--spacing) - 8px);
+      font-size: var(--font-s-h3);
+      margin-block-end: calc(var(--spacing) - 8px);
+    }
+  }
+}
