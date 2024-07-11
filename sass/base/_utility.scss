@@ -6,7 +6,8 @@
 
 .max-width {
   // width: min(calc(100% - 48px), 72.5rem);
-  width: clamp(calc(100% - 48px), calc(100% - 80px), 72.5rem);
-  max-width: 100%;
+  width: clamp(328px, calc(100% - 80px), 72.5rem);
+  // max-width: 100%;
   margin-inline: auto;
 }
+

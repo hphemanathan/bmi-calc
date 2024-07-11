@@ -73,6 +73,10 @@
     &--metric {
       // display: grid;
 
+      @include tab {
+        display: flex;
+      }
+
       &__input {
         margin-bottom: var(--spacing);
       }
