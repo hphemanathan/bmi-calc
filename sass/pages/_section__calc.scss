@@ -75,6 +75,7 @@
 
       @include tab {
         display: flex;
+        column-gap: var(--spacing);
       }
 
       &__input {
@@ -87,6 +88,10 @@
         font-weight: var(--font-w-B);
         padding: calc(var(--spacing) - 4px);
         width: 100%;
+
+        @include tab {
+          padding: var(--spacing);
+        }
 
         &:hover,
         :active {
@@ -132,6 +137,10 @@
         padding: calc(var(--spacing) - 4px);
         width: 100%;
 
+        @include tab {
+          padding: var(--spacing);
+        }
+
         &:hover,
         :active {
           cursor: pointer;
@@ -158,8 +167,18 @@
     background-color: var(--accent);
     border-radius: 25px;
 
+    @include tab {
+      border-radius: 16px;
+    }
+
     &-wrapper {
       padding: calc(var(--spacing) + 8px);
+      @include tab {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 168px;
+      }
     }
 
     &-text {
@@ -170,6 +189,15 @@
       font-size: var(--font-s-h1);
       font-weight: var(--font-w-SB);
       margin-block-end: var(--spacing);
+
+      @include tab {
+        line-height: normal;
+        margin-block-end: 0;
+      }
+    }
+
+    &-output {
+      margin-inline-end: var(--spacing);
     }
   }
 }
