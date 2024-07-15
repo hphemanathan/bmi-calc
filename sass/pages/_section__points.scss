@@ -1,7 +1,19 @@
 .section__points {
   &--card {
+    @include tab {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      column-gap: calc(var(--spacing) + 16px);
+      align-items: center;
+      margin-bottom: calc(var(--spacing) + 16px);
+    }
+
     &-icon {
       margin-block-end: calc(var(--spacing) + 8px);
+
+      @include tab {
+        margin-block-end: 0;
+      }
     }
     &-heading {
       font-size: var(--font-s-h3);
@@ -10,6 +22,10 @@
     }
     &-text {
       margin-block-end: calc(var(--spacing) + 16px);
+
+      @include tab {
+        margin-block-end: 0;
+      }
     }
   }
 }
