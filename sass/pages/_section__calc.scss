@@ -118,15 +118,23 @@
         margin-bottom: var(--spacing);
 
         &--height-wrapper {
-          display: flex;
-          justify-content: space-between;
-          gap: 16px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          column-gap: 16px;
+
+          @include tab {
+            column-gap: var(--spacing);
+          }
         }
 
         &--weight-wrapper {
-          display: flex;
-          justify-content: space-between;
-          gap: 16px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          column-gap: 16px;
+
+          @include tab {
+            column-gap: var(--spacing);
+          }
         }
       }
       & input {
