@@ -1,10 +1,26 @@
 .section__points {
+  background-image: linear-gradient(to right bottom, #fff, 75%, #d6e6fe);
+
+  @include tab {
+    margin-block-end: calc(var(--spacing) * 4);
+  }
+  &--wrapper {
+    width: clamp(328px, calc(100% - 80px), 72.5rem);
+    margin-inline: auto;
+    @include tab {
+      padding-block: calc(var(--spacing) * 2 + 12px);
+      // padding-inline: calc(var(--spacing) + 18px);
+    }
+  }
   &--card {
     @include tab {
       display: grid;
       grid-template-columns: 64px 1fr;
       column-gap: calc(var(--spacing) + 16px);
       align-items: center;
+    }
+
+    &:not(:last-of-type) {
       margin-bottom: calc(var(--spacing) + 16px);
     }
 

@@ -1,5 +1,7 @@
 .section__limitations {
   &--heading {
+    font-size: var(--font-s-h2);
+    font-weight: var(--font-w-SB);
     text-align: center;
     margin-block-end: calc(var(--spacing) + 8px);
   }
