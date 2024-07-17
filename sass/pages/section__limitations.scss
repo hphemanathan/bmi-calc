@@ -7,5 +7,6 @@
   }
   &--text {
     margin-block-end: calc(var(--spacing) * 2 + 8px);
+    text-align: center;
   }
 }
