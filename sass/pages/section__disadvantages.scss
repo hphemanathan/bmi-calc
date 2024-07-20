@@ -1,8 +1,34 @@
 .section__disadvantages {
+  background-image: linear-gradient(to right bottom, #fff, 75%, #d6e6fe);
+  padding-block-end: calc(var(--spacing) * 4);
+
+  &--wrapper {
+    width: clamp(328px, calc(100% - 80px), 72.5rem);
+    margin-inline: auto;
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(327px, max-content));
+
+    column-gap: calc(var(--spacing) - 10px);
+    row-gap: var(--spacing);
+    justify-content: center;
+
+    @include tab {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
   &--card {
     margin-block-end: calc(var(--spacing) - 8px);
-    background-color: gray;
+    background-color: #fff;
     border-radius: 16px;
+    box-shadow: var(--shadow);
+
+    @include tab {
+      flex: 1 1 327px;
+      max-width: 350px;
+      margin-block-end: 0;
+    }
+
     &-wrapper {
       padding: var(--spacing);
     }
