@@ -3,6 +3,10 @@
   background-color: #fff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   margin-block-end: calc(var(--spacing) * 3);
+
+  @include desktop {
+    margin-block-end: 0;
+  }
   &-wrapper {
     //
     padding: var(--spacing);
@@ -114,6 +118,9 @@
       }
     }
     &--imperial {
+      &.hide {
+        display: none;
+      }
       &__input {
         margin-bottom: var(--spacing);
 
@@ -184,8 +191,18 @@
       @include tab {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        column-gap: 168px;
+        // justify-content: space-between;
+        column-gap: calc(var(--spacing) * 7); //168px
+      }
+
+      @include desktop {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      @include desktop-l {
+        column-gap: calc(var(--spacing) * 4);
+        flex-direction: row;
+        align-items: center;
       }
     }
 
@@ -200,6 +217,14 @@
 
       @include tab {
         line-height: normal;
+        margin-block-end: 0;
+      }
+
+      @include desktop {
+        margin-block-end: calc(var(--spacing) / 2);
+      }
+
+      @include desktop-l {
         margin-block-end: 0;
       }
     }

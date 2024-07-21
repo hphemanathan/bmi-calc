@@ -23,99 +23,100 @@
     <title>BMI Calculator</title>
   </head>
   <body>
-    <header class="header">
+    <main class="container">
       <div class="header__logo center">
         <img src="/assets/images/logo.svg" alt="Brand Logo" />
       </div>
-      <h1 class="header__heading">Body Mass Index Calculator</h1>
-      <p class="header__text">
-        Better understand your weight in relation to your height using our body
-        mass index (BM) calculator. While BMI is not the sole determinant of a
-        healthy weight, it offers a valuable starting point to evaluate your
-        overall health and well-being.
-      </p>
-    </header>
+      <div class="header__wrapper">
+        <header class="header">
+          <h1 class="header__heading">Body Mass Index Calculator</h1>
+          <p class="header__text">
+            Better understand your weight in relation to your height using our
+            body mass index (BM) calculator. While BMI is not the sole
+            determinant of a healthy weight, it offers a valuable starting point
+            to evaluate your overall health and well-being.
+          </p>
+        </header>
 
-    <main class="container">
-      <section class="section__calc max-width">
-        <div class="section__calc-wrapper">
-          <h4 class="section__calc-heading">Enter your details below</h4>
-          <form action="" class="section__calc-form">
-            <div class="section__calc-form--unitSys">
-              <div class="section__calc-form--unitSys-input">
-                <input type="radio" id="Metric" name="unit" value="Metric" />
-                <label for="Metric">Metric</label>
+        <section class="section__calc max-width">
+          <div class="section__calc-wrapper">
+            <h4 class="section__calc-heading">Enter your details below</h4>
+            <form action="" class="section__calc-form">
+              <div class="section__calc-form--unitSys">
+                <div class="section__calc-form--unitSys-input">
+                  <input type="radio" id="Metric" name="unit" value="Metric" />
+                  <label for="Metric">Metric</label>
+                </div>
+                <div class="section__calc-form--unitSys-input">
+                  <input
+                    type="radio"
+                    id="Imperial"
+                    name="unit"
+                    value="Imperial" />
+                  <label for="Imperial">Imperial</label>
+                </div>
               </div>
-              <div class="section__calc-form--unitSys-input">
-                <input
-                  type="radio"
-                  id="Imperial"
-                  name="unit"
-                  value="Imperial" />
-                <label for="Imperial">Imperial</label>
-              </div>
-            </div>
 
-            <div class="section__calc-form--metric">
-              <div class="section__calc-form--metric__input">
-                <label for="height">Height</label>
-                <input type="text" id="height" name="height" />
-                <span>cm</span><br />
+              <div class="section__calc-form--metric">
+                <div class="section__calc-form--metric__input">
+                  <label for="height">Height</label>
+                  <input type="text" id="height" name="height" />
+                  <span>cm</span><br />
+                </div>
+                <div class="section__calc-form--metric__input">
+                  <label for="weight">Weight</label>
+                  <input type="text" id="weight" name="weight" />
+                  <span>kg</span>
+                </div>
               </div>
-              <div class="section__calc-form--metric__input">
-                <label for="weight">Weight</label>
-                <input type="text" id="weight" name="weight" />
-                <span>kg</span>
-              </div>
-            </div>
 
-            <div class="section__calc-form--imperial">
-              <div class="section__calc-form--imperial__input">
-                <label for="height">Height</label>
-                <div
-                  class="section__calc-form--imperial__input--height-wrapper">
-                  <div class="section__calc-form--imperial__input--height">
-                    <input type="text" id="height" name="height" />
-                    <span>ft</span>
+              <div class="section__calc-form--imperial hide">
+                <div class="section__calc-form--imperial__input">
+                  <label for="height">Height</label>
+                  <div
+                    class="section__calc-form--imperial__input--height-wrapper">
+                    <div class="section__calc-form--imperial__input--height">
+                      <input type="text" id="height" name="height" />
+                      <span>ft</span>
+                    </div>
+                    <div class="section__calc-form--imperial__input--height">
+                      <input type="text" id="height" name="height" />
+                      <span>in</span><br />
+                    </div>
                   </div>
-                  <div class="section__calc-form--imperial__input--height">
-                    <input type="text" id="height" name="height" />
-                    <span>in</span><br />
+                </div>
+                <div class="section__calc-form--imperial__input">
+                  <label for="weight">Weight</label>
+                  <div
+                    class="section__calc-form--imperial__input--weight-wrapper">
+                    <div class="section__calc-form--imperial__input--weight">
+                      <input type="text" id="weight" name="weight" />
+                      <span>st</span>
+                    </div>
+                    <div class="section__calc-form--imperial__input--weight">
+                      <input type="text" id="weight" name="weight" />
+                      <span>lbs</span>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="section__calc-form--imperial__input">
-                <label for="weight">Weight</label>
-                <div
-                  class="section__calc-form--imperial__input--weight-wrapper">
-                  <div class="section__calc-form--imperial__input--weight">
-                    <input type="text" id="weight" name="weight" />
-                    <span>st</span>
-                  </div>
-                  <div class="section__calc-form--imperial__input--weight">
-                    <input type="text" id="weight" name="weight" />
-                    <span>lbs</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
+            </form>
 
-          <div class="section__calc--result">
-            <div class="section__calc--result-wrapper">
-              <div class="wrapper">
-                <p class="section__calc--result-text">Your BMI is...</p>
-                <p class="section__calc--result-number">23.4</p>
+            <div class="section__calc--result">
+              <div class="section__calc--result-wrapper">
+                <div class="wrapper">
+                  <p class="section__calc--result-text">Your BMI is...</p>
+                  <p class="section__calc--result-number">23.4</p>
+                </div>
+                <p class="section__calc--result-output">
+                  Your BMI suggests you're a healthy weight. Your ideal weight
+                  is between 63.3Kgs - 85.2kgs
+                </p>
               </div>
-              <p class="section__calc--result-output">
-                Your BMI suggests you're a healthy weight. Your ideal weight is
-                between 63.3Kgs - 85.2kgs
-              </p>
             </div>
           </div>
-        </div>
-      </section>
-
+        </section>
+      </div>
       <section class="sectionBmi">
         <div class="sectionBmi__img center">
           <img
