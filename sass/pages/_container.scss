@@ -1,2 +1,12 @@
 .container {
+  .header-bg-wrapper {
+    // margin-block-start: calc(var(--spacing) * -3);
+
+    margin-inline-start: var(--spacing);
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right bottom, #fff, red);
+    border-bottom-left-radius: var(--spacing);
+    border-bottom-right-radius: var(--spacing);
+  }
 }
