@@ -8,6 +8,7 @@
     margin-block-end: 0;
     flex: 1.23;
   }
+
   &-wrapper {
     //
     padding: var(--spacing);
@@ -188,6 +189,11 @@
     }
 
     &-wrapper {
+      &.hide {
+        display: none;
+      }
+
+      display: block;
       padding: calc(var(--spacing) + 8px);
       @include tab {
         display: flex;
