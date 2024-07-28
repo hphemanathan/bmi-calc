@@ -14,7 +14,7 @@
   &--bg {
     @include desktop {
       height: 737px;
-      width: 75%;
+      width: 70%;
       background-image: linear-gradient(to right bottom, #fff, 75%, #d6e6fe);
       position: absolute;
       left: var(--spacing);

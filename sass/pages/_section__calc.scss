@@ -188,6 +188,25 @@
       border-radius: 16px 100px 100px 16px;
     }
 
+    &-default {
+      @include desktop {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 130px;
+        padding: calc(var(--spacing) + 8px);
+      }
+
+      &-heading {
+        font-size: var(--font-s-h3);
+        color: #fff;
+        margin-block-end: calc(var(--spacing) - 8px);
+
+        @include desktop {
+        }
+      }
+    }
+
     &-wrapper {
       &.hide {
         display: none;
