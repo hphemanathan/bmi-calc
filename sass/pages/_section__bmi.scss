@@ -10,6 +10,12 @@
     margin-inline-end: 40px;
   }
 
+  @include desktop {
+    width: clamp(328px, calc(100% - 80px), 72.5rem);
+    margin-inline: auto;
+    margin-block-end: calc(var(--spacing) * 4);
+  }
+
   &__img {
     margin-block-end: calc(var(--spacing) * 2);
 

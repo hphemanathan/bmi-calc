@@ -1,12 +1,53 @@
 .section__limitations {
+  @include desktop {
+    width: clamp(328px, calc(100% - 80px), 72.5rem);
+    margin-inline: auto;
+  }
+
+  &--header {
+    @include desktop {
+      flex: 0.8;
+    }
+  }
   &--heading {
     font-size: var(--font-s-h2);
     font-weight: var(--font-w-SB);
     text-align: center;
     margin-block-end: calc(var(--spacing) + 8px);
+
+    @include desktop {
+      text-align: left;
+    }
   }
   &--text {
     margin-block-end: calc(var(--spacing) * 2 + 8px);
     text-align: center;
+    @include desktop {
+      text-align: left;
+    }
+  }
+
+  &--wrapper-1 {
+    @include desktop {
+      display: flex;
+      justify-content: flex-start;
+      column-gap: calc(var(--spacing) * 5.5);
+      margin-block-end: calc(var(--spacing) + 8px);
+    }
+  }
+  &--wrapper-2 {
+    @include desktop {
+      display: flex;
+      justify-content: flex-end;
+      column-gap: calc(var(--spacing) + 8px);
+      margin-block-end: calc(var(--spacing) + 8px);
+    }
+  }
+  &--wrapper-3 {
+    @include desktop {
+      display: flex;
+      justify-content: center;
+      column-gap: calc(var(--spacing) + 8px);
+    }
   }
 }

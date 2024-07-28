@@ -4,12 +4,26 @@
   @include tab {
     margin-block-end: calc(var(--spacing) * 4);
   }
+
+  @include desktop {
+    margin-block-end: calc(var(--spacing) * 5);
+  }
+
+  @include desktop {
+    width: min(calc(100% - var(--spacing) * 2), 1392px);
+    margin-inline: auto;
+  }
   &--wrapper {
     width: clamp(328px, calc(100% - 80px), 72.5rem);
     margin-inline: auto;
     @include tab {
       padding-block: calc(var(--spacing) * 2 + 12px);
       // padding-inline: calc(var(--spacing) + 18px);
+    }
+
+    @include desktop {
+      display: flex;
+      column-gap: calc(var(--spacing) + 16px);
     }
   }
   &--card {
@@ -18,10 +32,18 @@
       grid-template-columns: 64px 1fr;
       column-gap: calc(var(--spacing) + 16px);
       align-items: center;
+
+      @include desktop {
+        display: block;
+      }
     }
 
     &:not(:last-of-type) {
-      margin-bottom: calc(var(--spacing) + 16px);
+      margin-block-end: calc(var(--spacing) + 16px);
+
+      @include desktop {
+        margin-block-end: 0;
+      }
     }
 
     &-icon {
@@ -29,6 +51,10 @@
 
       @include tab {
         margin-block-end: 0;
+      }
+
+      @include desktop {
+        margin-block-end: calc(var(--spacing) * 2);
       }
     }
     &-heading {
