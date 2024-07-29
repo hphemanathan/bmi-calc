@@ -2,6 +2,7 @@
   @include desktop {
     width: clamp(328px, calc(100% - 80px), 72.5rem);
     margin-inline: auto;
+    position: relative;
   }
 
   &--header {
@@ -49,5 +50,16 @@
       justify-content: center;
       column-gap: calc(var(--spacing) + 8px);
     }
+  }
+}
+
+.decorative-line-right {
+  display: none;
+
+  @include desktop {
+    display: block;
+    position: absolute;
+    top: 248px;
+    left: 180px;
   }
 }
