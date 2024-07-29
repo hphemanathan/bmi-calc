@@ -31,6 +31,11 @@
       // align-self: center;
     }
 
+    @include desktop {
+      align-self: self-end;
+      padding-block-end: calc(var(--spacing) * 3);
+    }
+
     &--heading {
       font-size: var(--font-s-h2);
       font-weight: var(--font-w-SB);

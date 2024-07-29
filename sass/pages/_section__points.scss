@@ -71,3 +71,14 @@
     }
   }
 }
+
+.decorative-line-right {
+  display: none;
+
+  @include desktop {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

@@ -8,6 +8,7 @@
 
       column-gap: calc(var(--spacing) * 5);
       margin-block-end: calc(var(--spacing) * 6);
+      position: relative;
     }
   }
 
@@ -15,5 +16,16 @@
     @include desktop {
       flex: 1;
     }
+  }
+}
+
+.decorative-line-left {
+  display: none;
+
+  @include desktop {
+    display: block;
+    position: absolute;
+    top: 110%;
+    right: 5%;
   }
 }
