@@ -12,6 +12,15 @@
   }
 
   &--bg {
+    height: 737px;
+    width: 100%;
+    background-image: linear-gradient(to right, #fff, 45%, #d6e6fe);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    border-radius: 0 0 var(--spacing) var(--spacing);
+
     @include desktop {
       height: 737px;
       width: 70%;
@@ -43,10 +52,23 @@
     }
   }
   &__heading {
+    text-align: center;
     font-size: var(--font-s-h1);
     font-weight: var(--font-w-SB);
     margin-block-end: var(--spacing);
     text-wrap: balance;
     letter-spacing: -3px;
+
+    @include desktop {
+      text-align: left;
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    @include desktop {
+      text-align: left;
+    }
   }
 }

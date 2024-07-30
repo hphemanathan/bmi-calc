@@ -21,7 +21,7 @@
     margin-block-end: calc(var(--spacing) - 8px);
     background-color: #fff;
     border-radius: 16px;
-    box-shadow: var(--shadow);
+    filter: drop-shadow(2px 4px 32px hsl(213, 46%, 82%));
 
     @include tab {
       flex: 1 1 327px;

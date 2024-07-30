@@ -16,6 +16,7 @@
   &-heading {
     font-size: var(--font-s-h3);
     margin-bottom: var(--spacing);
+    letter-spacing: -1px;
   }
 
   &-form {
@@ -31,6 +32,7 @@
         display: flex;
         align-items: center;
         gap: calc(var(--spacing) - 6px);
+
         & input {
           /* Add if not using autoprefixer */
           -webkit-appearance: none;
@@ -87,6 +89,12 @@
       &__input {
         margin-bottom: var(--spacing);
       }
+
+      & label {
+        display: inline-block;
+        margin-block-end: calc(var(--spacing) / 3);
+      }
+
       & input {
         border: 1px solid lightgray;
         border-radius: 15px;
@@ -146,6 +154,12 @@
           }
         }
       }
+
+      & label {
+        display: inline-block;
+        margin-block-end: calc(var(--spacing) / 3);
+      }
+
       & input {
         border: 1px solid lightgray;
         border-radius: 15px;
@@ -189,6 +203,12 @@
     }
 
     &-default {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      // height: 130px;
+      padding: calc(var(--spacing) + 8px);
+
       @include desktop {
         display: flex;
         flex-direction: column;
