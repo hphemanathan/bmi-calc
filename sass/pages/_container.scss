@@ -1,4 +1,5 @@
 .container {
+  margin-block-end: calc(var(--spacing) * 5); //120px
   .header-bg-wrapper {
     // margin-block-start: calc(var(--spacing) * -3);
 
