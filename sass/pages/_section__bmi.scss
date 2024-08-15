@@ -25,6 +25,8 @@
   }
   &__about {
     margin-block-end: calc(var(--spacing) * 5);
+    width: clamp(328px, calc(100% - 80px), 72.5rem);
+    margin-inline: auto;
 
     @include tab {
       margin-block-end: 0;
