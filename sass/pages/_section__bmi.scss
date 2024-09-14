@@ -7,7 +7,7 @@
     align-items: center;
     column-gap: calc(var(--spacing) * 3);
     // --spacing: 80px;
-    margin-inline-end: 40px;
+    margin-block-end: calc(var(--spacing) * 4);
   }
 
   @include desktop {
