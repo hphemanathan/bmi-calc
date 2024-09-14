@@ -1,4 +1,6 @@
 .section__limitations {
+  width: clamp(328px, calc(100% - 80px), 72.5rem);
+  margin-inline: auto;
   @include desktop {
     width: clamp(328px, calc(100% - 80px), 72.5rem);
     margin-inline: auto;
@@ -29,7 +31,7 @@
   }
 
   &--wrapper-1 {
-    @include desktop {
+    @include tab {
       display: flex;
       justify-content: flex-start;
       column-gap: calc(var(--spacing) * 5.5);

@@ -44,6 +44,11 @@
     padding-block-start: var(--32px);
     margin-block-end: var(--spacing);
 
+    @include tab {
+      display: flex;
+      justify-content: center;
+    }
+
     @include desktop {
       // justify-content: flex-start;
       // width: min(calc(100% - 80px), 72.5rem);
@@ -58,6 +63,11 @@
     margin-block-end: var(--spacing);
     text-wrap: balance;
     letter-spacing: -3px;
+
+    @include tab {
+      width: 75%;
+      margin-inline: auto;
+    }
 
     @include desktop {
       text-align: left;
