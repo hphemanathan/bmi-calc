@@ -1,6 +1,16 @@
 .section__limitations {
   width: clamp(328px, calc(100% - 80px), 72.5rem);
   margin-inline: auto;
+  @include tab {
+    display: grid;
+    column-gap: calc(var(--spacing) - 8px);
+    grid-template-areas:
+      "header header"
+      "column-1 column-2"
+      "column-3 column-4"
+      "column-5 column-5";
+    grid-template-columns: repeat(2, 1fr);
+  }
   @include desktop {
     width: clamp(328px, calc(100% - 80px), 72.5rem);
     margin-inline: auto;
@@ -8,6 +18,9 @@
   }
 
   &--header {
+    @include tab {
+      grid-area: header;
+    }
     @include desktop {
       flex: 0.8;
     }
@@ -27,30 +40,6 @@
     text-align: center;
     @include desktop {
       text-align: left;
-    }
-  }
-
-  &--wrapper-1 {
-    @include tab {
-      display: flex;
-      justify-content: flex-start;
-      column-gap: calc(var(--spacing) * 5.5);
-      margin-block-end: calc(var(--spacing) + 8px);
-    }
-  }
-  &--wrapper-2 {
-    @include desktop {
-      display: flex;
-      justify-content: flex-end;
-      column-gap: calc(var(--spacing) + 8px);
-      margin-block-end: calc(var(--spacing) + 8px);
-    }
-  }
-  &--wrapper-3 {
-    @include desktop {
-      display: flex;
-      justify-content: center;
-      column-gap: calc(var(--spacing) + 8px);
     }
   }
 }

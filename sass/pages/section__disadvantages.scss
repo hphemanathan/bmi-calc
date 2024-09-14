@@ -23,12 +23,33 @@
     border-radius: 16px;
     filter: drop-shadow(2px 4px 32px hsl(213, 46%, 82%));
 
-    @include tab {
-      flex: 1 1 327px;
-      max-width: 350px;
-      margin-block-end: 0;
+    &.one {
+      @include tab {
+        grid-area: column-1;
+      }
     }
-
+    &.two {
+      @include tab {
+        grid-area: column-2;
+      }
+    }
+    &.three {
+      @include tab {
+        grid-area: column-3;
+      }
+    }
+    &.four {
+      @include tab {
+        grid-area: column-4;
+      }
+    }
+    &.five {
+      @include tab {
+        grid-area: column-5;
+        width: 50%;
+        justify-self: center;
+      }
+    }
     &-wrapper {
       padding: var(--spacing);
     }
