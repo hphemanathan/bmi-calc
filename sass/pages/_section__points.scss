@@ -26,6 +26,8 @@
     @include desktop {
       display: flex;
       column-gap: calc(var(--spacing) + 16px);
+      padding-block-start: calc(var(--spacing) * 3);
+      padding-block-end: calc(var(--spacing) * 4);
     }
   }
   &--card {

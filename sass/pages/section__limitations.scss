@@ -11,6 +11,14 @@
       "column-5 column-5";
     grid-template-columns: repeat(2, 1fr);
   }
+
+  @include desktop {
+    grid-template-areas:
+      "header column-1"
+      "coloumn-2 coloumn-3"
+      "coloumn-4 coloumn-5";
+  }
+
   @include desktop {
     width: clamp(328px, calc(100% - 80px), 72.5rem);
     margin-inline: auto;

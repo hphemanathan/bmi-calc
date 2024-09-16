@@ -49,6 +49,10 @@
         width: 50%;
         justify-self: center;
       }
+      @include desktop {
+        width: auto;
+        justify-self: none;
+      }
     }
     &-wrapper {
       padding: var(--spacing);

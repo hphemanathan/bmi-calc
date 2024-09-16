@@ -70,7 +70,9 @@
     }
 
     @include desktop {
+      width: auto;
       text-align: left;
+      margin-block-end: calc(var(--spacing) + 12px);
     }
   }
 
