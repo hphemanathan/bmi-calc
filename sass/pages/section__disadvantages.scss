@@ -22,36 +22,55 @@
     background-color: #fff;
     border-radius: 16px;
     filter: drop-shadow(2px 4px 32px hsl(213, 46%, 82%));
+    @include desktop {
+      width: 365px;
+    }
 
     &.one {
       @include tab {
         grid-area: column-1;
+      }
+      @include desktop {
+        justify-self: end;
+        margin-right: calc(var(--spacing) * 4);
       }
     }
     &.two {
       @include tab {
         grid-area: column-2;
       }
+      @include desktop {
+        // justify-self: start;
+        grid-column: column-3;
+        position: relative;
+        top: 0;
+        left: -225px;
+      }
     }
     &.three {
       @include tab {
         grid-area: column-3;
+      }
+      @include desktop {
+        justify-self: end;
       }
     }
     &.four {
       @include tab {
         grid-area: column-4;
       }
+      @include desktop {
+        justify-self: end;
+      }
     }
     &.five {
       @include tab {
         grid-area: column-5;
-        width: 50%;
-        justify-self: center;
+        // width: 50%;
+        // justify-self: center;
       }
       @include desktop {
-        width: auto;
-        justify-self: none;
+        justify-self: start;
       }
     }
     &-wrapper {

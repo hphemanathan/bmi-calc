@@ -4,6 +4,7 @@
   @include tab {
     display: grid;
     column-gap: calc(var(--spacing) - 8px);
+    row-gap: var(--spacing);
     grid-template-areas:
       "header header"
       "column-1 column-2"
@@ -13,16 +14,12 @@
   }
 
   @include desktop {
-    grid-template-areas:
-      "header column-1"
-      "coloumn-2 coloumn-3"
-      "coloumn-4 coloumn-5";
-  }
-
-  @include desktop {
     width: clamp(328px, calc(100% - 80px), 72.5rem);
     margin-inline: auto;
-    position: relative;
+    grid-template-areas:
+      "header column-1"
+      "column-2 column-3"
+      "column-4 column-5";
   }
 
   &--header {
