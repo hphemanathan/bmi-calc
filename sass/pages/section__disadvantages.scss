@@ -44,7 +44,7 @@
         grid-column: column-3;
         position: relative;
         top: 0;
-        left: -225px;
+        left: -210px;
       }
     }
     &.three {
@@ -75,6 +75,9 @@
     }
     &-wrapper {
       padding: var(--spacing);
+      @include tab {
+        padding: calc(var(--spacing) + 8px);
+      }
     }
     &-header {
       display: flex;
