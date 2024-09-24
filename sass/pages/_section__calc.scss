@@ -79,6 +79,9 @@
       }
     }
     &--metric {
+      &.hide {
+        display: none;
+      }
       // display: grid;
 
       @include tab {
