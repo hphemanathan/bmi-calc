@@ -3,6 +3,14 @@ const ImperialButton = document.getElementById("Imperial");
 const MetricInput = document.querySelector(".section__calc-form--metric");
 const ImperialInput = document.querySelector(".section__calc-form--imperial")
 
+const metricHeight = document.getElementById("metricHeight");
+
+const metricWeight = document.getElementById("metricWeight");
+
+
+
+
+
 console.log (ImperialButton);
 
 function imperialCheck () {
