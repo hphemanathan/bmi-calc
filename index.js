@@ -7,9 +7,13 @@ const metricHeight = document.getElementById("metricHeight");
 
 const metricWeight = document.getElementById("metricWeight");
 
+const metricValue = document.querySelectorAll("#metricValue");
 
+console.log (metricValue);
 
-
+// metricHeight.addEventListener("input", function test (){
+//   console.log('test working');
+// })
 
 console.log (ImperialButton);
 
