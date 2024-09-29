@@ -11,9 +11,27 @@ const metricValue = document.querySelectorAll("#metricValue");
 
 console.log (metricValue);
 
-// metricHeight.addEventListener("input", function test (){
-//   console.log('test working');
-// })
+const height = metricValue[0];
+const weight = metricValue[1];
+
+function handleBmi () {
+  if (!height.value && weight.value) {
+    // console.log ('enter the height');
+  } else if (!weight.value && height.value) {
+    //  console.log("enter the weight");
+  } else if (height.value && weight.value) {
+    
+    
+    console.log(
+      (Number(weight.value) /
+        (Number(height.value / 100) * Number(height.value / 100))).toFixed(1)
+    );
+    
+  }
+  
+}
+
+metricValue.forEach(input => input.addEventListener ("input", handleBmi));
 
 console.log (ImperialButton);
 
