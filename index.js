@@ -9,6 +9,11 @@ const metricWeight = document.getElementById("metricWeight");
 
 const metricValue = document.querySelectorAll("#metricValue");
 
+const defaultResult = document.querySelector(".section__calc--result-default");
+
+const bmiResult = document.querySelector(".section__calc--result-wrapper");
+
+console.log (defaultResult)
 console.log (metricValue);
 
 const height = metricValue[0];
@@ -21,7 +26,10 @@ function handleBmi () {
     //  console.log("enter the weight");
   } else if (height.value && weight.value) {
     
-    
+
+    console.log(bmiResult);
+    bmiResult.classList.remove("hide")
+    defaultResult.classList.add("hide")
     console.log(
       (Number(weight.value) /
         (Number(height.value / 100) * Number(height.value / 100))).toFixed(1)
