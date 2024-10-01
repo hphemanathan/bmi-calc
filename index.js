@@ -2,46 +2,41 @@ const metricButton = document.getElementById('Metric');
 const ImperialButton = document.getElementById("Imperial");
 const MetricInput = document.querySelector(".section__calc-form--metric");
 const ImperialInput = document.querySelector(".section__calc-form--imperial")
-
 const metricHeight = document.getElementById("metricHeight");
-
 const metricWeight = document.getElementById("metricWeight");
-
 const metricValue = document.querySelectorAll("#metricValue");
-
 const defaultResult = document.querySelector(".section__calc--result-default");
-
 const bmiResult = document.querySelector(".section__calc--result-wrapper");
+const bmiResultNumber = document.querySelector(".section__calc--result-number");
+const bmiResultType = document.querySelector(".section__calc--result-output span");
+console.log (bmiResultType);
 
-console.log (defaultResult)
-console.log (metricValue);
 
 const height = metricValue[0];
 const weight = metricValue[1];
 
 function handleBmi () {
-  if (!height.value && weight.value) {
-    // console.log ('enter the height');
-  } else if (!weight.value && height.value) {
-    //  console.log("enter the weight");
-  } else if (height.value && weight.value) {
-    
+  if (height.value && weight.value) {
+    const result = (
+      weight.value /
+      (Number(height.value / 100) * Number(height.value / 100))
+    ).toFixed(1);
+    bmiResult.classList.remove("hide");
+    defaultResult.classList.add("hide");
+    console.log(result);
+    console.log(bmiResultNumber);
+    bmiResultNumber.textContent = result;
 
-    console.log(bmiResult);
-    bmiResult.classList.remove("hide")
-    defaultResult.classList.add("hide")
-    console.log(
-      (Number(weight.value) /
-        (Number(height.value / 100) * Number(height.value / 100))).toFixed(1)
-    );
-    
+    if (result < 18.5) {
+      bmiResultType.textContent = "under weight";
+    } else if (result >= 18.5 && result <= 24.9) {
+      bmiResultType.textContent = "healthy weight";
+    }
   }
-  
-}
+} 
 
 metricValue.forEach(input => input.addEventListener ("input", handleBmi));
 
-console.log (ImperialButton);
 
 function imperialCheck () {
   MetricInput.classList.add('hide')
