@@ -9,7 +9,8 @@ const defaultResult = document.querySelector(".section__calc--result-default");
 const bmiResult = document.querySelector(".section__calc--result-wrapper");
 const bmiResultNumber = document.querySelector(".section__calc--result-number");
 const bmiResultType = document.querySelector(".section__calc--result-output span");
-console.log (bmiResultType);
+const bmiWeightRange = document.querySelector(".section__calc--result-output .weightRange");
+console.log (bmiWeightRange);
 
 
 const height = metricValue[0];
@@ -31,10 +32,15 @@ function handleBmi () {
       bmiResultType.textContent = "under weight";
     } else if (result >= 18.5 && result <= 24.9) {
       bmiResultType.textContent = "healthy weight";
-    }
+    } else if (result >= 25 && result <= 29.9) {
+      bmiResultType.textContent = "overweight";
+  }else if (result >= 30) {
+      bmiResultType.textContent = "obese";
+}
+let 
+bmiWeightRange.textContent = `(18.5 * (Number(height.value / 100) * Number(height.value / 100)) )`;
   }
-} 
-
+}
 metricValue.forEach(input => input.addEventListener ("input", handleBmi));
 
 
