@@ -16,6 +16,9 @@ console.log (bmiWeightRange);
 const height = metricValue[0];
 const weight = metricValue[1];
 
+
+  // (18.5) * ((Number(height.value / 100) * Number(height.value / 100)));
+
 function handleBmi () {
   if (height.value && weight.value) {
     const result = (
@@ -37,8 +40,13 @@ function handleBmi () {
   }else if (result >= 30) {
       bmiResultType.textContent = "obese";
 }
-let 
-bmiWeightRange.textContent = `(18.5 * (Number(height.value / 100) * Number(height.value / 100)) )`;
+const bmiWeightRangeStart =
+  18.5 * ((Number(height.value / 100) * Number(height.value / 100))).toFixed(1);
+console.log(bmiWeightRangeStart);
+
+bmiWeightRange.textContent = bmiWeightRangeStart;
+
+// bmiWeightRange.textContent =  )
   }
 }
 metricValue.forEach(input => input.addEventListener ("input", handleBmi));
