@@ -5,15 +5,24 @@ const ImperialInput = document.querySelector(".section__calc-form--imperial")
 const metricHeight = document.getElementById("metricHeight");
 const metricWeight = document.getElementById("metricWeight");
 const metricValue = document.querySelectorAll("#metricValue");
+
 const imperialValue = document.querySelectorAll("#imperial");
+
+
 const defaultResult = document.querySelector(".section__calc--result-default");
 const bmiResult = document.querySelector(".section__calc--result-wrapper");
 const bmiResultNumber = document.querySelector(".section__calc--result-number");
 const bmiResultType = document.querySelector(".section__calc--result-output span");
 const bmiWeightRange = document.querySelector(".section__calc--result-output .weightRange");
+
 // console.log (bmiWeightRange);
 
 console.log (imperialValue);
+
+console.log (bmiWeightRange);
+
+
+
 
 
 const merticHeightInput = metricValue[0];
@@ -38,6 +47,21 @@ function handleBmiMetric () {
     bmiResult.classList.remove("hide");
     defaultResult.classList.add("hide");
  
+
+
+  // (18.5) * ((Number(height.value / 100) * Number(height.value / 100)));
+
+function handleBmi () {
+  if (height.value && weight.value) {
+    const result = (
+      weight.value /
+      (Number(height.value / 100) * Number(height.value / 100))
+    ).toFixed(1);
+    bmiResult.classList.remove("hide");
+    defaultResult.classList.add("hide");
+    console.log(result);
+    console.log(bmiResultNumber);
+
     bmiResultNumber.textContent = result;
 
     if (result < 18.5) {
@@ -48,6 +72,7 @@ function handleBmiMetric () {
       bmiResultType.textContent = "overweight";
   }else if (result >= 30) {
       bmiResultType.textContent = "obese";
+
 }
 const bmiWeightRangeStart =
   18.5 * ((Number(merticHeightInput.value / 100) * Number(merticHeightInput.value / 100))).toFixed(1);
@@ -121,11 +146,25 @@ console.log(bmiWeightRange);
       
     
   }
+
+
 }
+const bmiWeightRangeStart =
+  18.5 * ((Number(height.value / 100) * Number(height.value / 100))).toFixed(1);
+console.log(bmiWeightRangeStart);
+
+bmiWeightRange.textContent = bmiWeightRangeStart;
+
 
 metricValue.forEach((input) => input.addEventListener("input", handleBmiMetric));
 
 imperialValue.forEach((input) => input.addEventListener("input", handleBmiImperial));
+
+// bmiWeightRange.textContent =  )
+  }
+}
+metricValue.forEach(input => input.addEventListener ("input", handleBmi));
+
 
 
 
