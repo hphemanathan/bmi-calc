@@ -2,38 +2,55 @@ const metricButton = document.getElementById('Metric');
 const ImperialButton = document.getElementById("Imperial");
 const MetricInput = document.querySelector(".section__calc-form--metric");
 const ImperialInput = document.querySelector(".section__calc-form--imperial")
-
 const metricHeight = document.getElementById("metricHeight");
-
 const metricWeight = document.getElementById("metricWeight");
-
 const metricValue = document.querySelectorAll("#metricValue");
+const defaultResult = document.querySelector(".section__calc--result-default");
+const bmiResult = document.querySelector(".section__calc--result-wrapper");
+const bmiResultNumber = document.querySelector(".section__calc--result-number");
+const bmiResultType = document.querySelector(".section__calc--result-output span");
+const bmiWeightRange = document.querySelector(".section__calc--result-output .weightRange");
+console.log (bmiWeightRange);
 
-console.log (metricValue);
 
 const height = metricValue[0];
 const weight = metricValue[1];
 
-function handleBmi () {
-  if (!height.value && weight.value) {
-    // console.log ('enter the height');
-  } else if (!weight.value && height.value) {
-    //  console.log("enter the weight");
-  } else if (height.value && weight.value) {
-    
-    
-    console.log(
-      (Number(weight.value) /
-        (Number(height.value / 100) * Number(height.value / 100))).toFixed(1)
-    );
-    
-  }
-  
-}
 
+  // (18.5) * ((Number(height.value / 100) * Number(height.value / 100)));
+
+function handleBmi () {
+  if (height.value && weight.value) {
+    const result = (
+      weight.value /
+      (Number(height.value / 100) * Number(height.value / 100))
+    ).toFixed(1);
+    bmiResult.classList.remove("hide");
+    defaultResult.classList.add("hide");
+    console.log(result);
+    console.log(bmiResultNumber);
+    bmiResultNumber.textContent = result;
+
+    if (result < 18.5) {
+      bmiResultType.textContent = "under weight";
+    } else if (result >= 18.5 && result <= 24.9) {
+      bmiResultType.textContent = "healthy weight";
+    } else if (result >= 25 && result <= 29.9) {
+      bmiResultType.textContent = "overweight";
+  }else if (result >= 30) {
+      bmiResultType.textContent = "obese";
+}
+const bmiWeightRangeStart =
+  18.5 * ((Number(height.value / 100) * Number(height.value / 100))).toFixed(1);
+console.log(bmiWeightRangeStart);
+
+bmiWeightRange.textContent = bmiWeightRangeStart;
+
+// bmiWeightRange.textContent =  )
+  }
+}
 metricValue.forEach(input => input.addEventListener ("input", handleBmi));
 
-console.log (ImperialButton);
 
 function imperialCheck () {
   MetricInput.classList.add('hide')
