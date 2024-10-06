@@ -284,6 +284,10 @@
 
     &-output {
       margin-inline-end: var(--spacing);
+
+      & > .weightRange {
+        font-weight: bold;
+      }
     }
   }
 }
