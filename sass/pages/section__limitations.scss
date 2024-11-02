@@ -55,8 +55,8 @@
 
   @include desktop {
     display: block;
-    position: absolute;
-    top: 2140px;
-    left: 180px;
+    position: sticky;
+    top: 50%;
+    left: 20%;
   }
 }

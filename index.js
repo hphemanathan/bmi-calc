@@ -57,6 +57,7 @@ function handleBmiMetric () {
 
      bmiWeightRange.textContent = `${bmiWeightRangeStart}kgs - ${bmiWeightRangeEnd}kgs.`;
       }
+        
     }
 
 
@@ -87,15 +88,17 @@ function handleBmiImperial () {
         bmiResultType.textContent = "obese";
       }
 
+      const imperialHeight = (imperialHeightFt.value * 30.4) + (imperialHeightIn.value * 2.54);
+      console.log (imperialHeight);
       const bmiWeightRangeStart =
-  ((18.5 * ((Number(merticHeightInput.value / 100) * Number(merticHeightInput.value / 100))))*2.205).toFixed(1);
+  ((18.5 * ((Number(imperialHeight / 100) * Number(imperialHeight / 100))))*2.205).toFixed(1);
 
 const bmiWeightRangeEnd =
-  ((24.9 * (Number(merticHeightInput.value / 100) * Number(merticHeightInput.value / 100)))*2.205).toFixed(1);
+  ((24.9 * (Number(imperialHeight / 100) * Number(imperialHeight / 100)))*2.205).toFixed(1);
 
 bmiWeightRange.textContent =`${bmiWeightRangeStart}lbs - ${bmiWeightRangeEnd}lbs.`
 
-console.log(bmiWeightRange);
+console.log(bmiWeightRangeStart);
       
     
   }
@@ -121,6 +124,9 @@ imperialValue.forEach((input) => input.addEventListener("input", handleBmiImperi
 function MetricCheck() {
   MetricInput.classList.remove("hide");
   ImperialInput.classList.add("hide");
+ bmiResult.classList.add("hide");
+defaultResult.classList.remove("hide");
+
 
 }
 
